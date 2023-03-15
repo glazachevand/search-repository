@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  font-family: $fontFamily;
+  font-size: $fontSize;
+  color: $mainColor;
+  background-color: $backgroundColor;
+}
+.wrapper {
+  margin: 0 auto;
+  max-width: 940px;
+  min-height: 100%;
+  overflow: hidden;
+}
+.main {
+  padding: 20px;
+}

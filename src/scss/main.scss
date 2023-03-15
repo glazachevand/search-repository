@@ -1,0 +1,178 @@
+@use "sass:math";
+@import "./base/reset";
+@import "./base/vars";
+@import "./base/base";
+
+.title {
+  font-size: 1.25rem;
+  line-height: 1.5em;
+  font-weight: bold;
+  color: #1f4037;
+}
+.search-repo {
+  margin-bottom: 15px;
+  &__notes {
+    margin: 10px 0;
+    font-size: 12px;
+    font-style: italic;
+  }
+  &__body {
+    position: relative;
+    margin: 10px 0;
+    width: 50%;
+    @media (max-width: $sm) {
+      width: 100%;
+    }
+  }
+  &__search-row {
+    position: relative;
+  }
+  &__search {
+    padding: 5px 10px;
+    width: 100%;
+    font-size: $fontSize;
+    color: $mainColor;
+    background: $backgroundColorInput;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.1);
+    &::placeholder {
+      font-size: 0.875rem;
+      color: #9a9999;
+    }
+  }
+  &__btn {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-40%);
+    background: transparent;
+  }
+  &__checkbox {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    margin-top: 10px;
+  }
+  &__label {
+    font-size: 12px;
+    font-style: italic;
+  }
+}
+.search-results {
+  &__title span {
+    font-size: 0.875rem;
+    font-style: italic;
+  }
+}
+.repositories {
+  &__item {
+    border-bottom: 2px solid #e7e7e7;
+  }
+  &__empty {
+    margin-top: 10px;
+    font-size: 1.125rem;
+    color: #0a8578;
+  }
+}
+.repositories-item {
+  padding: 10px 0;
+  a:link {
+    color: #567fc0;
+  }
+  a:visited {
+    color: #36a87e;
+  }
+  a:hover,
+  a:active {
+    color: #ff2400;
+  }
+  &__name {
+    margin: 0 0 5px 0;
+    line-height: 1.5em;
+    font-weight: bold;
+    svg {
+      vertical-align: middle;
+    }
+  }
+  &__description {
+    margin: 0 0 10px 0;
+    font-size: 0.75rem;
+    text-align: justify;
+  }
+  &__login {
+    margin: 0 0 10px 0;
+    font-size: 0.875rem;
+    span {
+      font-size: 0.75rem;
+      font-style: italic;
+      color: $mainColor;
+    }
+  }
+  &__date {
+    margin: 0 0 5px 0;
+    font-size: 0.75rem;
+    font-style: italic;
+  }
+  &__homepage {
+    margin: 10px 0;
+    font-size: 0.75rem;
+  }
+}
+.message-error {
+  position: relative;
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 12px;
+  color: $redColor;
+  border: 1px solid $redColor;
+  border-radius: 10px;
+  background-color: transparent;
+  z-index: 10;
+}
+.red {
+  color: $redColor;
+  font-weight: bold;
+}
+.invalid {
+  border-color: $redColor;
+}
+// loader
+.preloader-container {
+  width: 50%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+.preloader {
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  border: 0.2rem solid rgb(86, 127, 192);
+  border-radius: 100%;
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -0.1rem 0 0 -0.1rem;
+    border-bottom: 0.2rem solid #567fc0;
+    border-radius: 0.3rem;
+    transform-origin: 0.1rem center;
+  }
+  &:before {
+    width: 30%;
+    animation: rotate 20s linear infinite;
+  }
+  &:after {
+    width: 40%;
+    background-color: rgb(86, 127, 192);
+    animation: rotate 2s linear infinite;
+  }
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
