@@ -12,31 +12,29 @@
 
 <body>
   <div class="wrapper">
-    <div class="wrapper">
-      <main class="main">
-        <section class="search-repo">
-          <h1 class="title">Поиск репозиториев Github по подстроке</h1>
-          <div class="search-repo__notes">Введите подстроку не менее <span>3</span> символов</div>
-          <div class="search-repo__body">
-            <form action="#" method="GET" class="search-repo__form" name="searchform">
-              <div class="search-repo__search-row">
-                <input type="search" class="search-repo__search" name="search" placeholder="Введите подстроку..." title="Введите подстроку"
-                  autocomplete autofocus>
-                <button type="submit" class="search-repo__btn" name="btn"><img src="./img/search.svg" alt="search"></button>
-              </div>
-              <div class="search-repo__checkbox">
-                <input id="cheсk" type="checkbox" name="check">
-                <label for="cheсk" class="search-repo__label"><span>сортировать по популярности</span></label>
-              </div>
-            </form>
-          </div>
-        </section>
-        <section class="search-results">
-          <h2 class="search-results__title title">Результаты поиска<span></span></h2>
-          <div class="repositories"></div>
-        </section>
-      </main>
-    </div>
+    <main class="main">
+      <section class="search-repo">
+        <h1 class="title">Поиск репозиториев Github по названию</h1>
+        <div class="search-repo__notes">Введите подстроку не менее <span>3</span> символов</div>
+        <div class="search-repo__body">
+          <form action="#" method="GET" class="search-repo__form" name="searchform">
+            <div class="search-repo__search-row">
+              <input type="search" class="search-repo__search" name="search" placeholder="Введите подстроку..." title="Введите подстроку" autocomplete
+                autofocus>
+              <button type="submit" class="search-repo__btn" name="btn"><img src="./img/search.svg" alt="search"></button>
+            </div>
+            <div class="search-repo__checkbox">
+              <input id="cheсk" type="checkbox" name="check">
+              <label for="cheсk" class="search-repo__label"><span>сортировать по популярности</span></label>
+            </div>
+          </form>
+        </div>
+      </section>
+      <section class="search-results">
+        <h2 class="search-results__title title">Результаты поиска<span></span></h2>
+        <div class="repositories"></div>
+      </section>
+    </main>
   </div>
 </body>
 

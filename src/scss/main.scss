@@ -8,9 +8,12 @@
   line-height: 1.5em;
   font-weight: bold;
   color: #1f4037;
+  @media (max-width: $sm) {
+    font-size: 1.1rem;
+  }
 }
 .search-repo {
-  margin-bottom: 15px;
+  padding: 10px 0;
   &__notes {
     margin: 10px 0;
     font-size: 12px;
